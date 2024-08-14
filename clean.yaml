@@ -99,7 +99,7 @@ tasks:
   # clean_lib
   - action: download_file
     path: ./tmp/clean_lib.zip
-    url: https://github.com/Clean-Server-Pack/clean_lib/releases/latest_production/download/clean_lib.zip
+    url: https://github.com/Clean-Server-Pack/clean_lib/releases/download/latest_production/clean_lib.zip
   - action: unzip
     dest: ./resources/[libraries]
     src: ./tmp/clean_lib.zip
