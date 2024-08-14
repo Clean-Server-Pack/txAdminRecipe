@@ -19,12 +19,6 @@ tasks:
     src: ./tmp/clean/server.cfg
     dest: ./server.cfg
 
-  # UPDATE SERVER NAME
-  - action: replace_string
-    file: ./server.cfg
-    search: 'serverName'
-    replace: '{{serverName}} | Powered by Clean'
-
   # SERVER CONFIGS
   - action: move_path
     src: ./tmp/clean/server_configs
