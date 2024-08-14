@@ -3,10 +3,12 @@ $onesync: on
 name: Clean Base
 version: 1.0.0
 author: DirkScripts
-description: Only includes the base including qbx_core and any free releases will still require you to insert your [CleanPack] folder from keymaster
+description: >
+  Only includes the base including qbx_core and any free releases will still
+  require you to insert your [CleanPack] folder from keymaster.
 
 tasks:
-  #  DOWNLOAD BASE FILES FROM TXADMINRECIPE
+  # DOWNLOAD BASE FILES FROM TXADMINRECIPE
   - action: download_github
     src: https://github.com/Clean-Server-Pack/txAdminRecipe/
     ref: main
@@ -55,9 +57,9 @@ tasks:
     dest: ./resources/[badgers]/Badger_Discord_API
   # DiscordAcePerms 
   - action: download_github 
-    src: https://github.com/JaredScar/Badger_Discord_API
+    src: https://github.com/JaredScar/DiscordAcePerms
     ref: main 
-    dest: ./resources/[badgers]/Badger_Discord_API
+    dest: ./resources/[badgers]/DiscordAcePerms
 
   # [STANDALONE] 
   - action: ensure_dir
@@ -85,8 +87,9 @@ tasks:
     ref: main
     src: https://github.com/AvarianKnight/pma-voice
 
-  - action: waste_time # prevent github throttling
+  - action: waste_time # prevent GitHub throttling
     seconds: 10
+
   # SQL STUFF 
   - action: connect_database
   - action: query_database
