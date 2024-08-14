@@ -79,7 +79,7 @@ tasks:
   # xsound 
   - action: download_github
     src: https://github.com/Xogy/xsound
-    ref: main 
+    ref: master 
     dest: ./resources/[standalone]/xsound
   # pma-voice  
   - action: download_github
