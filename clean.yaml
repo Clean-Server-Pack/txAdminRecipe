@@ -58,7 +58,7 @@ tasks:
   # DiscordAcePerms 
   - action: download_github 
     src: https://github.com/JaredScar/DiscordAcePerms
-    ref: main 
+    ref: master 
     dest: ./resources/[badgers]/DiscordAcePerms
 
   # [STANDALONE] 
