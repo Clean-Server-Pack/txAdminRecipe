@@ -98,6 +98,13 @@ tasks:
   - action: unzip
     dest: ./resources/[libraries]
     src: ./tmp/clean_lib.zip
+  # oxmysql
+  - action: download_file
+    path: ./tmp/oxmysql.zip
+    url: https://github.com/overextended/oxmysql/releases/latest/download/oxmysql.zip
+  - action: unzip
+    dest: ./resources/[libraries]
+    src: ./tmp/oxmysql.zip
 
   # [CLEAN] 
   - action: ensure_dir 
