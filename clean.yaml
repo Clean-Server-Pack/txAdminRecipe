@@ -81,9 +81,50 @@ tasks:
     ref: main
     src: https://github.com/AvarianKnight/pma-voice
 
-  - action: waste_time # prevent GitHub throttling
-    seconds: 10
+  # [LIBRARIES] 
+  - action: ensure_dir 
+    path: ./resources/[libraries]
+  # ox_lib
+  - action: download_file
+    path: ./tmp/ox_lib.zip
+    url: https://github.com/overextended/ox_lib/releases/latest/download/ox_lib.zip
+  - action: unzip
+    dest: ./resources/[libraries]
+    src: ./tmp/ox_lib.zip
+  # clean_lib
+  - action: download_file
+    path: ./tmp/clean_lib.zip
+    url: https://github.com/Clean-Server-Pack/clean_lib/releases/latest/download/clean_lib.zip
+  - action: unzip
+    dest: ./resources/[libraries]
+    src: ./tmp/clean_lib.zip
 
+  # [CLEAN] 
+  - action: ensure_dir 
+    path: ./resources/[clean]
+
+  # [CREATORS] 
+  - action: ensure_dir 
+    path: ./resources/[creators]
+  # > [LB]
+  - action: ensure_dir 
+    path: ./resources/[creators]/[lb]
+    
+  # [STREAM] 
+  - action: ensure_dir 
+    path: ./resources/[stream] 
+  - action: ensure_dir 
+    path: ./resources/[stream]/[maps]
+  - action: ensure_dir 
+    path: ./resources/[stream]/[vehicles]
+  - action: ensure_dir 
+    path: ./resources/[stream]/[shells]
+  - action: ensure_dir 
+    path: ./resources/[stream]/[clothing]
+  - action: ensure_dir 
+    path: ./resources/[stream]/[props]
+
+ 
   # SQL STUFF 
   - action: connect_database
   - action: query_database
