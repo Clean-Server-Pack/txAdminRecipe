@@ -53,7 +53,7 @@ tasks:
   # Badger_Discord_API 
   - action: download_github
     src: https://github.com/JaredScar/Badger_Discord_API
-    ref: master
+    ref: main
     dest: ./resources/[badgers]/Badger_Discord_API
   # DiscordAcePerms 
   - action: download_github 
