@@ -42,12 +42,12 @@ tasks:
     dest: ./resources/[cfx-default]   
   # [FRAMEWORK] 
   - action: ensure_dir
-    path: ./resource/[framework] 
+    path: ./resources/[framework] 
   # qbox_core [clean fork] 
   - action: download_github
     src: https://github.com/Clean-Server-Pack/qbx_core
     ref: main 
-    dest: ./resources/[framework/qbx_core 
+    dest: ./resources/[framework]/qbx_core 
   # [BADGERS]
   - action: ensure_dir
     path: ./resources/[badgers] 
