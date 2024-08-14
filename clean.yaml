@@ -80,6 +80,11 @@ tasks:
     dest: ./resources/[standalone]/pma-voice
     ref: main
     src: https://github.com/AvarianKnight/pma-voice
+  # ox_target 
+  - action: download_github
+    dest: ./resources/[standalone]/ox_target
+    ref: main
+    src: https://github.com/overextended/ox_target
 
   # [LIBRARIES] 
   - action: ensure_dir 
@@ -94,7 +99,7 @@ tasks:
   # clean_lib
   - action: download_file
     path: ./tmp/clean_lib.zip
-    url: https://github.com/Clean-Server-Pack/clean_lib/releases/latest/download/clean_lib.zip
+    url: https://github.com/Clean-Server-Pack/clean_lib/archive/refs/tags/latest_production.zip
   - action: unzip
     dest: ./resources/[libraries]
     src: ./tmp/clean_lib.zip
