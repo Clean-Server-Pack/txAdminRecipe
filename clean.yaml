@@ -86,7 +86,7 @@ tasks:
   - action: download_github
     dest: ./resources/[standalone]/pma-voice
     ref: main
-    src: https://github.com/AvarianKnight/pma-voice
+    src: https://github.com/Clean-Server-Pack/pma-voice
   # ox_target 
   - action: download_github
     dest: ./resources/[standalone]/ox_target
