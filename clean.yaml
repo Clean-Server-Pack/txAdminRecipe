@@ -40,36 +40,24 @@ tasks:
     src: https://github.com/citizenfx/cfx-server-data
     subpath: resources
     dest: ./resources/[cfx-default]   
-  # [FRAMEWORK] 
-  - action: ensure_dir
-    path: ./resources/[framework] 
-  # qbox_core [clean fork] 
-  - action: download_github
-    src: https://github.com/Clean-Server-Pack/qbx_core
-    ref: main 
-    dest: ./resources/[framework]/qbx_core 
-  # [BADGERS]
-  - action: ensure_dir
-    path: ./resources/[badgers] 
-  # Badger_Discord_API 
-  - action: download_github
-    src: https://github.com/JaredScar/Badger_Discord_API
-    ref: main
-    dest: ./resources/[badgers]/Badger_Discord_API
-  # DiscordAcePerms 
-  - action: download_github 
-    src: https://github.com/JaredScar/DiscordAcePerms
-    ref: master 
-    dest: ./resources/[badgers]/DiscordAcePerms
-
   # [STANDALONE] 
   - action: ensure_dir
     path: ./resources/[standalone] 
+
+  # ox_lib
+  - action: download_file
+    path: ./tmp/ox_lib.zip
+    url: https://github.com/overextended/ox_lib/releases/latest/download/ox_lib.zip
+  - action: unzip
+    dest: ./resources/[standalone]
+    src: ./tmp/ox_lib.zip
+
   # bob74_ipl 
   - action: download_github
     src: https://github.com/Bob74/bob74_ipl
     ref: master 
     dest: ./resources/[standalone]/bob74_ipl
+
   # screenshot-basic 
   - action: download_file
     path: ./tmp/screenshot-basic.zip
@@ -77,57 +65,103 @@ tasks:
   - action: unzip
     dest: ./resources/[standalone]/screenshot-basic
     src: ./tmp/screenshot-basic.zip
+
   # xsound 
   - action: download_github
     src: https://github.com/Xogy/xsound
     ref: master 
     dest: ./resources/[standalone]/xsound
+
   # pma-voice  
   - action: download_github
     dest: ./resources/[standalone]/pma-voice
     ref: main
     src: https://github.com/Clean-Server-Pack/pma-voice
-  # ox_target 
-  - action: download_github
-    dest: ./resources/[standalone]/ox_target
-    ref: main
-    src: https://github.com/overextended/ox_target
 
-  # [LIBRARIES] 
-  - action: ensure_dir 
-    path: ./resources/[libraries]
-  # ox_lib
+  # ox_target | CLEAN VERSION
   - action: download_file
-    path: ./tmp/ox_lib.zip
-    url: https://github.com/overextended/ox_lib/releases/latest/download/ox_lib.zip
+    path: ./tmp/ox_target.zip
+    url: https://github.com/Clean-Server-Pack/ox_target/releases/download/latest_production/ox_target.zip
   - action: unzip
-    dest: ./resources/[libraries]
-    src: ./tmp/ox_lib.zip
-  # clean_lib
+    dest: ./resources/[standalone]
+    src: ./tmp/ox_target.zip
+
+  # sleepless_interact | CLEAN VERSION
   - action: download_file
-    path: ./tmp/clean_lib.zip
-    url: https://github.com/Clean-Server-Pack/clean_lib/releases/download/latest_production/clean_lib.zip
+    path: ./tmp/sleepless_interact.zip
+    url: https://github.com/Clean-Server-Pack/sleepless_interact/releases/download/latest_production/sleepless_interact.zip
   - action: unzip
-    dest: ./resources/[libraries]
-    src: ./tmp/clean_lib.zip
+    dest: ./resources/[standalone]
+    src: ./tmp/sleepless_interact.zip
+
   # oxmysql
   - action: download_file
     path: ./tmp/oxmysql.zip
     url: https://github.com/overextended/oxmysql/releases/latest/download/oxmysql.zip
   - action: unzip
-    dest: ./resources/[libraries]
+    dest: ./resources/[standalone]
     src: ./tmp/oxmysql.zip
+
 
   # [CLEAN] 
   - action: ensure_dir 
     path: ./resources/[clean]
 
+  # [CLEAN/ACTIVITIES] 
+  - action: ensure_dir 
+    path: ./resources/[clean]/[activities]
+
+  # [CLEAN/CORE] 
+  - action: ensure_dir 
+    path: ./resources/[clean]/[core]
+
+  # clean_lib
+  - action: download_file
+    path: ./tmp/clean_lib.zip
+    url: https://github.com/Clean-Server-Pack/clean_lib/releases/download/latest_production/clean_lib.zip
+  - action: unzip
+    dest: ./resources/[core]
+    src: ./tmp/clean_lib.zip
+
+  # qbx_core | CLEAN VERSION
+  - action: download_github
+    dest: ./resources/[core]/qbx_core
+    ref: main
+    src: https://github.com/Clean-Server-Pack/qbx_core
+
+  # [CLEAN/CRIMINAL] 
+  - action: ensure_dir 
+    path: ./resources/[clean]/[criminal]
+
+  # [CLEAN/GOVERNMENT] 
+  - action: ensure_dir 
+    path: ./resources/[clean]/[government]
+
+  # [CLEAN/JOBS] 
+  - action: ensure_dir 
+    path: ./resources/[clean]/[jobs]
+
+  # [CLEAN/UI] 
+  - action: ensure_dir 
+    path: ./resources/[clean]/[ui]
+
+  # [CLEAN/UTILITIES] 
+  - action: ensure_dir 
+    path: ./resources/[clean]/[utilities]
+
+  # clean_digiscanner 
+  - action: download_github
+    dest: ./resources/[clean]/[utilities]/clean_digiscanner
+    ref: main
+    src: https://github.com/Clean-Server-Pack/clean_digiscanner
+
+  # [CLEAN/VEHICLE] 
+  - action: ensure_dir 
+    path: ./resources/[clean]/[vehicle]
+
   # [CREATORS] 
   - action: ensure_dir 
     path: ./resources/[creators]
-  # > [LB]
-  - action: ensure_dir 
-    path: ./resources/[creators]/[lb]
     
   # [STREAM] 
   - action: ensure_dir 
