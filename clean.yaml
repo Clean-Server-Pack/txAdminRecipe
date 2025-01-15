@@ -94,6 +94,14 @@ tasks:
     dest: ./resources/[standalone]
     src: ./tmp/sleepless_interact.zip
 
+  # clean_chat
+  - action: download_file
+    path: ./tmp/clean_chat.zip
+    url: https://github.com/Clean-Server-Pack/clean_chat/releases/download/latest_production/clean_chat.zip
+  - action: unzip
+    dest: ./resources/[standalone]
+    src: ./tmp/clean_chat.zip
+
   # oxmysql
   - action: download_file
     path: ./tmp/oxmysql.zip
