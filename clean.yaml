@@ -128,12 +128,12 @@ tasks:
     path: ./tmp/clean_lib.zip
     url: https://github.com/Clean-Server-Pack/clean_lib/releases/download/latest_production/clean_lib.zip
   - action: unzip
-    dest: ./resources/[core]
+    dest: ./resources/[clean]/[core]
     src: ./tmp/clean_lib.zip
 
   # qbx_core | CLEAN VERSION
   - action: download_github
-    dest: ./resources/[core]/qbx_core
+    dest: ./resources/[clean]/[core]/qbx_core
     ref: main
     src: https://github.com/Clean-Server-Pack/qbx_core
 
